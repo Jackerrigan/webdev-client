@@ -1,6 +1,9 @@
 export default function HeadingTags() {
   return (
     <div id="wd-h-tag">
+      <h1>Main</h1>
+      <h2>secondary</h2>
+      <h3>Tertiary</h3>
       <h4>Heading Tags</h4>
       Text documents are often broken up into several sections and subsections.
       Each section is usually prefaced with a short title or heading that
@@ -14,10 +17,12 @@ export default function HeadingTags() {
       is the largest heading and h6 is the smallest heading. A{" "}
       <span id="wd-inline-span">span</span> sits in this sentence without
       starting a new line.
-      <div id="wd-h-tag">
+      <div id="wd-your-heading">
         <h4>Jack</h4>
-        cheeseburger.
+        cheeseburger. <span id="wd-your-span">hamburger.</span>
       </div>
+      <h5>five</h5>
+      <h6>six</h6>
     </div>
   );
 }

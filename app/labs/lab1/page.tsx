@@ -1,4 +1,5 @@
 import HeadingTags from "./HeadingTags";
+import Images from "./Images";
 import ListTags from "./ListTags";
 import ParagraphTag from "./ParagraphTag";
 import Tables from "./Tables";
@@ -12,6 +13,7 @@ export default function Lab1() {
       <ParagraphTag />
       <ListTags />
       <Tables />
+      <Images />
 
       {/* do the next exercise here */}
     </div>
