@@ -1,9 +1,12 @@
 export default function HeadingTags() {
   return (
     <div id="wd-h-tag">
-      <h1>Main</h1>
-      <h2>secondary</h2>
-      <h3>Tertiary</h3>
+      <h1>h1</h1>
+      <h2>h2</h2>
+      <h3>h3</h3>
+      <h4>h4</h4>
+      <h5>h5</h5>
+      <h6>h6</h6>
       <h4>Heading Tags</h4>
       Text documents are often broken up into several sections and subsections.
       Each section is usually prefaced with a short title or heading that
@@ -19,10 +22,18 @@ export default function HeadingTags() {
       starting a new line.
       <div id="wd-your-heading">
         <h4>Jack</h4>
-        cheeseburger. <span id="wd-your-span">hamburger.</span>
+        I'm a Computer Science and <span id="wd-your-span">Theatre</span> major.
       </div>
-      <h5>five</h5>
-      <h6>six</h6>
+      <div id="wd-ai-headings">
+        <h4>Lab notes</h4>
+        This section collects observations recorded while working through the
+        lab exercises.
+        <h5>What I built</h5>A small page that demonstrates each of the six
+        heading levels alongside short blocks of sample text.
+        <h6>Next step</h6>
+        Continue with the remaining tags and review how the browser renders each
+        one by default.
+      </div>
     </div>
   );
 }

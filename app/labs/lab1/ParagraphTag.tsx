@@ -22,6 +22,12 @@ export default function ParagraphTag() {
         This is the third paragraph. Wrap each paragraph with the paragraph tag
         to tell browsers to render the gaps.
       </p>
+      <p id="wd-ai-p">
+        Wrapping text in a paragraph tag creates vertical spacing because
+        browsers render each paragraph as its own block-level box stacked on a
+        new line. Each box also carries a default top and bottom margin, which
+        is what produces the visible gap between paragraphs.
+      </p>
       <p id="wd-p-your-1">I grew up in tokyo, hawaii, and hong kong.</p>
       <p id="wd-p-your-2">I hope to learn the fundamentals of web design.</p>
     </div>
