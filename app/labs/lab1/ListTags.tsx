@@ -36,6 +36,16 @@ export default function ListTags() {
         <li>Scythe</li>
         <li>Ruination</li>
       </ul>
+      HTML tags covered in this chapter
+      <ul id="wd-ai-html-tags">
+        <li>h1 &ndash; the largest heading, used for the main title</li>
+        <li>h6 &ndash; the smallest heading, used for the deepest subsection</li>
+        <li>p &ndash; a paragraph of text rendered with vertical spacing</li>
+        <li>ol &ndash; an ordered list whose items are numbered in sequence</li>
+        <li>ul &ndash; an unordered list whose items are marked with bullets</li>
+        <li>li &ndash; a single item inside an ordered or unordered list</li>
+        <li>table &ndash; a grid of rows and columns of related data</li>
+      </ul>
     </div>
   );
 }

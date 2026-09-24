@@ -30,14 +30,94 @@ export default function Tables() {
             <td align="center">2/17/21</td>
             <td align="right">95</td>
           </tr>
+          <tr>
+            <td>Q4</td>
+            <td align="center">Tables</td>
+            <td align="center">2/24/21</td>
+            <td align="right">88</td>
+          </tr>
+          <tr>
+            <td>Q5</td>
+            <td align="center">Forms</td>
+            <td align="center">3/3/21</td>
+            <td align="right">92</td>
+          </tr>
+          <tr>
+            <td>Q6</td>
+            <td align="center">Flexbox</td>
+            <td align="center">3/10/21</td>
+            <td align="right">79</td>
+          </tr>
+          <tr>
+            <td>Q7</td>
+            <td align="center">Bootstrap</td>
+            <td align="center">3/17/21</td>
+            <td align="right">96</td>
+          </tr>
+          <tr>
+            <td>Q8</td>
+            <td align="center">React</td>
+            <td align="center">3/24/21</td>
+            <td align="right">84</td>
+          </tr>
+          <tr>
+            <td>Q9</td>
+            <td align="center">Node.js</td>
+            <td align="center">3/31/21</td>
+            <td align="right">91</td>
+          </tr>
+          <tr>
+            <td>Q10</td>
+            <td align="center">MongoDB</td>
+            <td align="center">4/7/21</td>
+            <td align="right">90</td>
+          </tr>
         </tbody>
         <tfoot>
           <tr>
             <td colSpan={3}>Average</td>
-            <td align="right">90</td>
+            <td align="right">89</td>
           </tr>
         </tfoot>
       </table>
+      <div id="wd-your-table">
+        <table border={1} width="100%">
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th align="center">Course</th>
+              <th align="center">Days</th>
+              <th>Expected Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Acting</td>
+              <td align="center">THTR1120</td>
+              <td align="center">M/W</td>
+              <td align="center">A</td>
+            </tr>
+            <tr>
+              <td>Lighting Design</td>
+              <td align="center">THTR2370</td>
+              <td align="center">M/W</td>
+              <td align="center">A</td>
+            </tr>
+            <tr>
+              <td>Web Design</td>
+              <td align="center">CS4550</td>
+              <td align="center">W</td>
+              <td align="center">A</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colSpan={3}>Combined</td>
+              <td align="center">A</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
     </div>
   );
 }
