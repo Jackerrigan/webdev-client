@@ -7,6 +7,7 @@ import OtherFieldTypes from "./OtherFieldTypes";
 import RadioButtons from "./RadioButtons";
 import TextFields from "./TextFields";
 import Textarea from "./Textarea";
+import YourForm from "./YourForm";
 
 export default function Forms() {
   return (
@@ -25,6 +26,7 @@ export default function Forms() {
         <Dropdowns />
         <OtherFieldTypes />
         <Buttons />
+        <YourForm />
       </form>
     </div>
   );
