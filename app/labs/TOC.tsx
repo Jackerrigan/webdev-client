@@ -1,1 +1,3 @@
-export default function TOC() {}
+export default function TOC() {
+  return null;
+}
