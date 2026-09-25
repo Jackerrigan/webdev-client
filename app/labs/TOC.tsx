@@ -6,7 +6,9 @@ export default function TOC() {
       <h3>Table of Contents</h3>
       <ul>
         <li>
-          <Link href="/labs">Home</Link>
+          <Link href="/labs" id="wd-home-link">
+            Home
+          </Link>
         </li>
         <li>
           <Link href="/labs/lab1">Lab 1</Link>
