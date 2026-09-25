@@ -46,6 +46,21 @@ export default function HighlightedParagraphLab() {
         borderWidth="3px"
         borderRadius="0px"
       />
+      <HighlightedParagraph
+        text="I would go to mcdonalds after major high school events and shows"
+        backgroundColor="#13fd7c"
+        border-style="dashed"
+        borderColor="#134790"
+        borderWidth="5px"
+        borderRadius="9px"
+      />
+      <HighlightedParagraph
+        text="Props let the same component render with different colors."
+        backgroundColor="lavender"
+        borderColor="purple"
+        borderWidth={3}
+        borderRadius={12}
+      />
     </div>
   );
 }

@@ -62,6 +62,28 @@ export default function HighlightedBoxLab() {
           A second box with different style props wrapping different content.
         </p>
       </HighlightedBox>
+      <HighlightedBox
+        backgroundColor="#24889e"
+        borderColor="green"
+        borderWidth={4}
+        borderRadius={16}
+      >
+        <h4>Callout</h4>
+        <p>Jack Kerrigan</p>
+        <ul>
+          <li>deepen knowledge of webdesign</li>
+          <li>become more familiar with this language</li>
+          <li>stay on top of work</li>
+        </ul>
+      </HighlightedBox>
+      <HighlightedBox backgroundColor="honeydew" borderColor="seagreen">
+        <h4>Sample nested content</h4>
+        <ul>
+          <li>p</li>
+          <li>table</li>
+          <li>form</li>
+        </ul>
+      </HighlightedBox>
     </div>
   );
 }
