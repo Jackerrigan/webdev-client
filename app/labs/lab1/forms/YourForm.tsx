@@ -1,70 +1,85 @@
 export default function YourForm() {
   return (
     <div>
-      <h2>My Form</h2>
+      <h2>Your Form</h2>
       <form id="wd-your-form">
-        <label>Basic info:</label> <br />
-        <label htmlFor="wd-text-fields-first-name">First Name:</label>
-        <input placeholder="First Name" id="wd-text-fields-first-name" /> <br />
-        <label htmlFor="wd-text-fields-last-name">Last Name:</label>
-        <input placeholder="Last Name" id="wd-text-fields-last-name" /> <br />
-        <label htmlFor="wd-text-fields-student-id">Student ID:</label>
-        <input placeholder="Student ID" id="wd-text-fields-student-id" /> <br />
-        <label>Bio:</label> <br />
-        <textarea id="wd-textarea" cols={10} rows={10} /> <br />
-        <label>Status:</label> <br />
-        <input type="radio" name="radio-year" id="wd-radio-freshman" />
-        <label htmlFor="wd-radio-freshman">Freshman</label>
-        <br />
-        <input type="radio" name="radio-year" id="wd-radio-sophomore" />
-        <label htmlFor="wd-radio-sophomore">Sophomore</label>
-        <br />
-        <input type="radio" name="radio-year" id="wd-radio-Junior" />
-        <label htmlFor="wd-radio-Junior">Junior</label>
-        <br />
-        <input type="radio" name="radio-year" id="wd-radio-senior" />
-        <label htmlFor="wd-radio-senior">Senior</label>
-        <br />
-        <input type="radio" name="radio-year" id="wd-radio-5th-year" />
-        <label htmlFor="wd-radio-5th-year">5th Year</label>
-        <br />
-        <input type="radio" name="radio-year" id="wd-radio-grad" />
-        <label htmlFor="wd-radio-grad">Graduate</label>
-        <br />
-        <label>Enrollment</label>
-        <br />
-        <input type="radio" name="radio-enrollment" id="wd-radio-full-time" />
-        <label htmlFor="wd-radio-full-time">Full Time</label>
-        <br />
-        <input type="radio" name="radio-enrollment" id="wd-radio-part-time" />
-        <label htmlFor="wd-radio-part-time">Part Time</label>
-        <br />
-        <label>Interests:</label>
-        <br />
-        <input type="checkbox" name="check-interest" id="wd-chkbox-clubs" />
-        <label htmlFor="wd-chkbox-clubs">Clubs</label>
-        <br />
-        <input type="checkbox" name="check-interest" id="wd-chkbox-career" />
-        <label htmlFor="wd-chkbox-career">Career</label>
-        <br />
-        <input type="checkbox" name="check-interest" id="wd-chkbox-languages" />
-        <label htmlFor="wd-chkbox-languages">Languages</label>
-        <br />
+        <h3>Basic Information</h3>
+        <label htmlFor="wd-text-fields-name">Name:</label>
         <input
-          type="checkbox"
-          name="check-interest"
-          id="wd-chkbox-frameworks"
+          type="text"
+          placeholder="SAMPLE: Jane Doe"
+          id="wd-text-fields-name"
         />
-        <label htmlFor="wd-chkbox-frameworks">Frameworks</label>
         <br />
-        <label>Major:</label>
+        <label htmlFor="wd-text-fields-password">Password:</label>
+        <input
+          type="password"
+          placeholder="SAMPLE: password"
+          id="wd-text-fields-password"
+        />
         <br />
+        <label htmlFor="wd-text-fields-email">Email:</label>
+        <input
+          type="email"
+          placeholder="SAMPLE: jane@university.edu"
+          id="wd-text-fields-email"
+        />
+        <br />
+        <label htmlFor="wd-textarea">Bio:</label>
+        <br />
+        <textarea
+          id="wd-textarea"
+          placeholder="SAMPLE: Tell us about yourself"
+          cols={30}
+          rows={5}
+        />
+        <br />
+
+        <fieldset>
+          <legend>Class Standing</legend>
+          <input type="radio" name="class-standing" id="wd-radio-freshman" />
+          <label htmlFor="wd-radio-freshman">Freshman</label>
+          <br />
+          <input type="radio" name="class-standing" id="wd-radio-sophomore" />
+          <label htmlFor="wd-radio-sophomore">Sophomore</label>
+          <br />
+          <input type="radio" name="class-standing" id="wd-radio-junior" />
+          <label htmlFor="wd-radio-junior">Junior</label>
+          <br />
+          <input type="radio" name="class-standing" id="wd-radio-senior" />
+          <label htmlFor="wd-radio-senior">Senior</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Enrollment</legend>
+          <input type="radio" name="enrollment" id="wd-radio-full-time" />
+          <label htmlFor="wd-radio-full-time">Full-time</label>
+          <br />
+          <input type="radio" name="enrollment" id="wd-radio-part-time" />
+          <label htmlFor="wd-radio-part-time">Part-time</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Interests</legend>
+          <input type="checkbox" name="interest" id="wd-checkbox-clubs" />
+          <label htmlFor="wd-checkbox-clubs">Clubs</label>
+          <br />
+          <input type="checkbox" name="interest" id="wd-checkbox-career" />
+          <label htmlFor="wd-checkbox-career">Career</label>
+          <br />
+          <input type="checkbox" name="interest" id="wd-checkbox-languages" />
+          <label htmlFor="wd-checkbox-languages">Languages</label>
+        </fieldset>
+
+        <label htmlFor="wd-select-one-major">Major:</label>
         <select id="wd-select-one-major" defaultValue="CS">
           <option value="CS">Computer Science</option>
-          <option value="AI">AI</option>
+          <option value="AI">Artificial Intelligence</option>
           <option value="CY">Cybersecurity</option>
+          <option value="DS">Data Science</option>
         </select>
-        <label htmlFor="wd-select-many-topics">Topics of Interest: </label>
+        <br />
+        <label htmlFor="wd-select-many-topics">Topics of Interest:</label>
         <br />
         <select
           multiple
@@ -76,38 +91,26 @@ export default function YourForm() {
           <option value="SECURITY">Security</option>
           <option value="ALGORITHMS">Algorithms</option>
         </select>
-        <label>Other Info:</label>
         <br />
-        <label htmlFor="wd-text-fields-email">Email: </label>
-        <input
-          type="email"
-          placeholder="School Email"
-          id="wd-text-fields-email"
-        />
-        <br />
-        <label htmlFor="wd-text-fields-grad-year">Graduation Year: </label>
+        <label htmlFor="wd-text-fields-grad-year">Graduation Year:</label>
         <input
           type="number"
-          placeholder="20??"
+          placeholder="SAMPLE: 2028"
           id="wd-text-fields-grad-year"
           min={2020}
-          max={2030}
+          max={2035}
         />
         <br />
-        <label htmlFor="wd-text-fields-birthday">birthday: </label>
-        <input
-          type="date"
-          placeholder="January 1"
-          id="wd-text-fields-birthday"
-        />
+        <label htmlFor="wd-text-fields-date">Important Date:</label>
+        <input type="date" id="wd-text-fields-date" />
         <br />
-        <label htmlFor="wd-text-fields-excitement">Course Excitement: </label>
+        <label htmlFor="wd-text-fields-range">Course Excitement (0-10):</label>
         <input
           type="range"
-          placeholder="5"
-          min="0"
-          max="10"
-          id="wd-text-fields-excitement"
+          min={0}
+          max={10}
+          defaultValue={5}
+          id="wd-text-fields-range"
         />
         <br />
         <button id="wd-html-button-save" type="submit">
