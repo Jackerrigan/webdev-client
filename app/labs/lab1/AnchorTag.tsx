@@ -11,6 +11,26 @@ export default function AnchorTag() {
       <a href="https://github.com/jannunzi" id="wd-github">
         GitHub
       </a>
+      <br />
+      <a href="https://www.youtube.com" id="wd-your-link">
+        click here
+      </a>{" "}
+      to go to youtube
+      <br />
+      <a
+        href="https://github.com/Jackerrigan"
+        id="wd-your-github"
+        target="_blank"
+      >
+        GitHub
+      </a>
+      <br />
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table"
+        id="wd-ai-link"
+      >
+        MDN: table element
+      </a>
     </>
   );
 }
