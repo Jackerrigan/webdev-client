@@ -30,6 +30,11 @@ export default function TOC() {
             Chapter 1
           </Link>
         </li>
+        <li>
+          <Link href="/" id="wd-kambaz-link">
+            Kambaz
+          </Link>
+        </li>
       </ul>
       <h6>so many weapons, the deadliest is your faith</h6>
     </nav>
