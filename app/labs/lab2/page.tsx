@@ -90,6 +90,9 @@ export default function Lab2() {
           conflicting tag section text
         </p>
       </div>
+      <p id="wd-ai-cascade" className="wd-ai-cascade">
+        Sample paragraph matching a p tag rule, a class rule, and an id rule
+      </p>
     </div>
   );
 }

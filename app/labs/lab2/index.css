@@ -74,3 +74,16 @@ p#wd-ai-id-selector {
   background-color: antiquewhite;
   color: darkgreen;
 }
+
+/* Cascade check: the id selector (#wd-ai-cascade) should win, so red. */
+p {
+  background-color: green;
+}
+
+.wd-ai-cascade {
+  background-color: yellow;
+}
+
+#wd-ai-cascade {
+  background-color: red;
+}
