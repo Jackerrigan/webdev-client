@@ -1,3 +1,4 @@
+import ForegroundColors from "./ForegroundColors";
 import "./index.css";
 
 export default function Lab2() {
@@ -93,6 +94,7 @@ export default function Lab2() {
       <p id="wd-ai-cascade" className="wd-ai-cascade">
         Sample paragraph matching a p tag rule, a class rule, and an id rule
       </p>
+      <ForegroundColors />
     </div>
   );
 }
