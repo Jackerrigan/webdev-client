@@ -1,4 +1,19 @@
+import BackgroundColors from "./BackgroundColors";
+import Borders from "./Borders";
+import BoxModel from "./BoxModel";
+import Corners from "./Corners";
+import Dimensions from "./Dimensions";
+import Display from "./Display";
+import Flex from "./Flex";
+import Float from "./Float";
+import ForegroundColors from "./ForegroundColors";
+import GridLayout from "./GridLayout";
 import "./index.css";
+import MediaQueriesDemo from "./MediaQueriesDemo";
+import Padding from "./Padding";
+import Positions from "./Positions";
+import ReactIconsSampler from "./ReactIconsSampler";
+import Zindex from "./Zindex";
 
 export default function Lab2() {
   return (
@@ -90,6 +105,24 @@ export default function Lab2() {
           conflicting tag section text
         </p>
       </div>
+      <p id="wd-ai-cascade" className="wd-ai-cascade">
+        Sample paragraph matching a p tag rule, a class rule, and an id rule
+      </p>
+      <ForegroundColors />
+      <BackgroundColors />
+      <Borders />
+      <Padding />
+      <BoxModel />
+      <Corners />
+      <Dimensions />
+      <Display />
+      <Positions />
+      <Zindex />
+      <Float />
+      <GridLayout />
+      <Flex />
+      <MediaQueriesDemo />
+      <ReactIconsSampler />
     </div>
   );
 }
