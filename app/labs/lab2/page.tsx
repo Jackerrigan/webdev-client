@@ -8,6 +8,7 @@ import ForegroundColors from "./ForegroundColors";
 import "./index.css";
 import Padding from "./Padding";
 import Positions from "./Positions";
+import Zindex from "./Zindex";
 
 export default function Lab2() {
   return (
@@ -111,6 +112,7 @@ export default function Lab2() {
       <Dimensions />
       <Display />
       <Positions />
+      <Zindex />
     </div>
   );
 }
