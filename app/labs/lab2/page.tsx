@@ -7,6 +7,7 @@ import Display from "./Display";
 import ForegroundColors from "./ForegroundColors";
 import "./index.css";
 import Padding from "./Padding";
+import Positions from "./Positions";
 
 export default function Lab2() {
   return (
@@ -109,6 +110,7 @@ export default function Lab2() {
       <Corners />
       <Dimensions />
       <Display />
+      <Positions />
     </div>
   );
 }
