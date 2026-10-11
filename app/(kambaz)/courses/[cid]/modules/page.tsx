@@ -58,6 +58,10 @@ export default function Modules() {
         <Module title="Sample module (AI)">
           <Lesson title="Sample lesson (AI)" />
         </Module>
+        <Module title="Week 4" />
+        <Lesson title="FINAL">
+          <li className="wd-content-item">Surprise final exam</li>
+        </Lesson>
       </ul>
     </div>
   );
