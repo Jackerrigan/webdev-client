@@ -11,6 +11,9 @@ export default function Margins() {
       <div className="wd-margin-all-around wd-padding-fat wd-border-fat wd-border-yellow wd-border-solid wd-bg-color-blue wd-fg-color-white">
         Margin all around
       </div>
+      <div className="wd-margin-all-around wd-padding-fat wd-border-fat wd-border-yellow wd-border-dashed wd-bg-color-red wd-fg-color-black">
+        Your Margin
+      </div>
     </div>
   );
 }

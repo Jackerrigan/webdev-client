@@ -9,6 +9,7 @@ import Float from "./Float";
 import ForegroundColors from "./ForegroundColors";
 import GridLayout from "./GridLayout";
 import "./index.css";
+import Margins from "./Margins";
 import MediaQueriesDemo from "./MediaQueriesDemo";
 import Padding from "./Padding";
 import Positions from "./Positions";
@@ -112,6 +113,7 @@ export default function Lab2() {
       <BackgroundColors />
       <Borders />
       <Padding />
+      <Margins />
       <BoxModel />
       <Corners />
       <Dimensions />
