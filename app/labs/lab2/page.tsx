@@ -1,3 +1,4 @@
+import BackgroundColors from "./BackgroundColors";
 import ForegroundColors from "./ForegroundColors";
 import "./index.css";
 
@@ -95,6 +96,7 @@ export default function Lab2() {
         Sample paragraph matching a p tag rule, a class rule, and an id rule
       </p>
       <ForegroundColors />
+      <BackgroundColors />
     </div>
   );
 }
