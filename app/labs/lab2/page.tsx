@@ -4,8 +4,12 @@ import BoxModel from "./BoxModel";
 import Corners from "./Corners";
 import Dimensions from "./Dimensions";
 import Display from "./Display";
+import Flex from "./Flex";
+import Float from "./Float";
 import ForegroundColors from "./ForegroundColors";
+import GridLayout from "./GridLayout";
 import "./index.css";
+import MediaQueriesDemo from "./MediaQueriesDemo";
 import Padding from "./Padding";
 import Positions from "./Positions";
 import Zindex from "./Zindex";
@@ -113,6 +117,10 @@ export default function Lab2() {
       <Display />
       <Positions />
       <Zindex />
+      <Float />
+      <GridLayout />
+      <Flex />
+      <MediaQueriesDemo />
     </div>
   );
 }
