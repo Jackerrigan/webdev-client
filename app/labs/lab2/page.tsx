@@ -12,6 +12,7 @@ import "./index.css";
 import MediaQueriesDemo from "./MediaQueriesDemo";
 import Padding from "./Padding";
 import Positions from "./Positions";
+import ReactIconsSampler from "./ReactIconsSampler";
 import Zindex from "./Zindex";
 
 export default function Lab2() {
@@ -121,6 +122,7 @@ export default function Lab2() {
       <GridLayout />
       <Flex />
       <MediaQueriesDemo />
+      <ReactIconsSampler />
     </div>
   );
 }
