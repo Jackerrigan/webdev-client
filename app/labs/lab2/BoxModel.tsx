@@ -23,6 +23,10 @@ export default function BoxModel() {
         <div className="wd-box-sizing-border">
           border-box: width 200px includes padding and border
         </div>
+        {/* border-box is the box-sizing that keeps the declared 200px width */}
+        <div className="wd-box-sizing-border">
+          third box: same width, padding and border (border-box keeps 200px)
+        </div>
       </div>
     </div>
   );

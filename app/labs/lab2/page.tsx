@@ -1,5 +1,9 @@
 import BackgroundColors from "./BackgroundColors";
 import Borders from "./Borders";
+import BoxModel from "./BoxModel";
+import Corners from "./Corners";
+import Dimensions from "./Dimensions";
+import Display from "./Display";
 import ForegroundColors from "./ForegroundColors";
 import "./index.css";
 import Padding from "./Padding";
@@ -101,6 +105,10 @@ export default function Lab2() {
       <BackgroundColors />
       <Borders />
       <Padding />
+      <BoxModel />
+      <Corners />
+      <Dimensions />
+      <Display />
     </div>
   );
 }
