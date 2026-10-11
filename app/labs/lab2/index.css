@@ -334,3 +334,22 @@ p {
   right: 10px;
   bottom: 10px;
 }
+.wd-pos-fixed {
+  position: fixed;
+  right: 0px;
+  bottom: 50%;
+}
+.wd-ai-pos-fixed {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: purple;
+  color: white;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+.wd-your-pos-fixed {
+  position: fixed;
+  right: 10;
+  top: 25%;
+}
