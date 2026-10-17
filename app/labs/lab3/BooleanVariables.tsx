@@ -33,8 +33,6 @@ export default function BooleanVariables() {
       <br />
       yourString1 = {yourString1 + ""}
       <br />
-      formatCompare = {formatCompare + ""}
-      <br />
       true6 = {true6 + ""}
       <hr />
     </div>
