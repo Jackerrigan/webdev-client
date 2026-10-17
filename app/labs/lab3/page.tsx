@@ -1,7 +1,12 @@
-export default function Lab2() {
+import VariablesAndConstants from "./VariablesAndConstants";
+import VariableTypes from "./VariableTypes";
+
+export default function Lab3() {
   return (
-    <div>
-      <p>Lab 3</p>
+    <div id="wd-lab3">
+      <h2>Lab 3</h2>
+      <VariablesAndConstants />
+      <VariableTypes />
     </div>
   );
 }
