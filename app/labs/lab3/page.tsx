@@ -3,6 +3,7 @@ import BooleanVariables from "./BooleanVariables";
 import ConditionalOutputIfElse from "./ConditionalOutputIfElse";
 import ConditionalOutputInline from "./ConditionalOutputInline";
 import IfElse from "./IfElse";
+import ImpliedReturn from "./ImpliedReturn";
 import LegacyFunctions from "./LegacyFunctions";
 import NullUndefined from "./NullUndefined";
 import TernaryOperator from "./TernaryOperator";
@@ -23,6 +24,7 @@ export default function Lab3() {
       <NullUndefined />
       <LegacyFunctions />
       <ArrowFunctions />
+      <ImpliedReturn />
     </div>
   );
 }
