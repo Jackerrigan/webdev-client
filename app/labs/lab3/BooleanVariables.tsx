@@ -9,8 +9,8 @@ export default function BooleanVariables() {
   let true4 = numberVariable === 123;
   let true5 = floatingPointNumber !== 321.432;
   let false3 = numberVariable < 100;
-  let yourString1 = "123" === 123;
-  let formatCompare = "123" == 123;
+  let yourString1 = "123" === "123";
+  //let formatCompare = "123" == 123;
   const true6 = numberVariable !== 0;
   return (
     <div id="wd-boolean-variables">
