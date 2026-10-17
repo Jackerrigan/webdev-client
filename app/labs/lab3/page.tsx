@@ -2,6 +2,7 @@ import BooleanVariables from "./BooleanVariables";
 import ConditionalOutputIfElse from "./ConditionalOutputIfElse";
 import ConditionalOutputInline from "./ConditionalOutputInline";
 import IfElse from "./IfElse";
+import LegacyFunctions from "./LegacyFunctions";
 import NullUndefined from "./NullUndefined";
 import TernaryOperator from "./TernaryOperator";
 import VariablesAndConstants from "./VariablesAndConstants";
@@ -19,6 +20,7 @@ export default function Lab3() {
       <ConditionalOutputIfElse />
       <ConditionalOutputInline />
       <NullUndefined />
+      <LegacyFunctions />
     </div>
   );
 }
