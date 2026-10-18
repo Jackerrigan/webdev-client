@@ -6,6 +6,7 @@ import IfElse from "./IfElse";
 import ImpliedReturn from "./ImpliedReturn";
 import LegacyFunctions from "./LegacyFunctions";
 import NullUndefined from "./NullUndefined";
+import SimpleArrays from "./SimpleArrays";
 import TemplateLiterals from "./TemplateLiterals";
 import TernaryOperator from "./TernaryOperator";
 import VariablesAndConstants from "./VariablesAndConstants";
@@ -27,6 +28,7 @@ export default function Lab3() {
       <ArrowFunctions />
       <ImpliedReturn />
       <TemplateLiterals />
+      <SimpleArrays />
     </div>
   );
 }
