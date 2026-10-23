@@ -4,9 +4,13 @@ import ArrowFunctions from "./ArrowFunctions";
 import BooleanVariables from "./BooleanVariables";
 import ConditionalOutputIfElse from "./ConditionalOutputIfElse";
 import ConditionalOutputInline from "./ConditionalOutputInline";
+import FindFunction from "./FindFunction";
+import FindIndex from "./FindIndex";
+import ForLoops from "./ForLoops";
 import IfElse from "./IfElse";
 import ImpliedReturn from "./ImpliedReturn";
 import LegacyFunctions from "./LegacyFunctions";
+import MapFunction from "./MapFunction";
 import NullUndefined from "./NullUndefined";
 import SimpleArrays from "./SimpleArrays";
 import TemplateLiterals from "./TemplateLiterals";
@@ -33,6 +37,10 @@ export default function Lab3() {
       <SimpleArrays />
       <ArrayIndexAndLength />
       <AddingAndRemovingToFromArrays />
+      <ForLoops />
+      <MapFunction />
+      <FindFunction />
+      <FindIndex />
     </div>
   );
 }
