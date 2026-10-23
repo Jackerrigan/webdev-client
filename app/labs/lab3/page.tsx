@@ -8,6 +8,7 @@ import FilterFunction from "./FilterFunction";
 import FindFunction from "./FindFunction";
 import FindIndex from "./FindIndex";
 import ForLoops from "./ForLoops";
+import House from "./House";
 import IfElse from "./IfElse";
 import ImpliedReturn from "./ImpliedReturn";
 import IncludesSomeEvery from "./IncludesSomeEvery";
@@ -49,6 +50,7 @@ export default function Lab3() {
       <IncludesSomeEvery />
       <ReduceFunction />
       <JsonStringify />
+      <House />
     </div>
   );
 }
