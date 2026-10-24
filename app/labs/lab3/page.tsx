@@ -24,6 +24,7 @@ import LegacyFunctions from "./LegacyFunctions";
 import MapFunction from "./MapFunction";
 import NullUndefined from "./NullUndefined";
 import OptionalChaining from "./OptionalChaining";
+import PathParameters from "./PathParameters";
 import ReduceFunction from "./ReduceFunction";
 import ServerComponentDemo from "./ServerComponentDemo";
 import SimpleArrays from "./SimpleArrays";
@@ -32,6 +33,7 @@ import Square from "./Square";
 import Styles from "./Styles";
 import TemplateLiterals from "./TemplateLiterals";
 import TernaryOperator from "./TernaryOperator";
+import TodoList from "./todos/TodoList";
 import VariablesAndConstants from "./VariablesAndConstants";
 import VariableTypes from "./VariableTypes";
 
@@ -76,18 +78,12 @@ export default function Lab3() {
       <Add a={3} b={4} />
       <h4>Square of 4</h4>
       <Square>4</Square>
-      <p>
-        Square of 5 = <Square>5</Square>
-      </p>
-      <Square>9</Square>
       <hr />
       <Highlight>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       </Highlight>
-      <br />
-      <Highlight>I am so tired</Highlight>
-      <br />
-      <Highlight>Children can be any JSX</Highlight>
+      <PathParameters />
+      <TodoList />
     </div>
   );
 }
