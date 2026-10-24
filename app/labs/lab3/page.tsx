@@ -24,6 +24,7 @@ import OptionalChaining from "./OptionalChaining";
 import ReduceFunction from "./ReduceFunction";
 import SimpleArrays from "./SimpleArrays";
 import Spreader from "./Spreader";
+import Styles from "./Styles";
 import TemplateLiterals from "./TemplateLiterals";
 import TernaryOperator from "./TernaryOperator";
 import VariablesAndConstants from "./VariablesAndConstants";
@@ -64,6 +65,7 @@ export default function Lab3() {
       <DestructingImports />
       <OptionalChaining />
       <Classes />
+      <Styles />
     </div>
   );
 }
