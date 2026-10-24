@@ -35,6 +35,11 @@ export default function TOC() {
             Kambaz
           </Link>
         </li>
+        <li>
+          <Link href="https://kambaz.dev/book/ch3" id="wd-book-ch3-link">
+            Book Ch3
+          </Link>
+        </li>
       </ul>
       <h6>so many weapons, the deadliest is your faith</h6>
     </nav>
