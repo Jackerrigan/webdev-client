@@ -28,7 +28,12 @@ const LINKS = [
     label: "Lab 3",
     match: (p: string) => p.includes("/lab3"),
   },
-  { href: "/", id: "wd-kambaz-link", label: "Kambaz", match: () => false },
+  {
+    href: "/account/signin",
+    id: "wd-kambaz-link",
+    label: "Kambaz",
+    match: () => false,
+  },
 ] as const;
 
 const activeStyle = {
