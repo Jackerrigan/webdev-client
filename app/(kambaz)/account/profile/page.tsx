@@ -1,67 +1,40 @@
-import Link from "next/link";
+"use client";
+
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useAccountContext, type User } from "../AccountContext";
 
 export default function Profile() {
+  const [profile, setProfile] = useState<User | null>(null);
+  const { currentUser, setCurrentUser } = useAccountContext();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!currentUser) {
+      router.push("/account/signin");
+      return;
+    }
+    setProfile(currentUser);
+  }, [currentUser, router]);
+
+  const signout = () => {
+    setCurrentUser(null);
+    router.push("/account/signin");
+  };
+
+  if (!profile) return null;
   return (
     <div id="wd-profile-screen">
       <h3>Profile</h3>
       <input
-        defaultValue="alice"
-        placeholder="username"
-        className="wd-username mb-2 w-full rounded border border-neutral-300 px-3 py-2"
+        id="wd-username"
+        value={profile.username}
+        onChange={(e) => setProfile({ ...profile, username: e.target.value })}
       />
-      <br />
-      <input
-        defaultValue="123"
-        placeholder="password"
-        type="password"
-        className="wd-password mb-2 w-full rounded border border-neutral-300 px-3 py-2"
-      />
-      <br />
-      <input
-        defaultValue="Alice"
-        placeholder="First Name"
-        id="wd-firstname"
-        className="mb-2 w-full rounded border border-neutral-300 px-3 py-2"
-      />
-      <br />
-      <input
-        defaultValue="Wonderland"
-        placeholder="Last Name"
-        id="wd-lastname"
-        className="mb-2 w-full rounded border border-neutral-300 px-3 py-2"
-      />
-      <br />
-      <input
-        defaultValue="2000-01-01"
-        type="date"
-        id="wd-dob"
-        className="mb-2 w-full rounded border border-neutral-300 px-3 py-2"
-      />
-      <br />
-      <input
-        defaultValue="alice@wonderland"
-        type="email"
-        id="wd-email"
-        className="mb-2 w-full rounded border border-neutral-300 px-3 py-2"
-      />
-      <br />
-      <select
-        defaultValue="FACULTY"
-        id="wd-role"
-        className="mb-2 w-full rounded border border-neutral-300 px-3 py-2"
-      >
-        <option value="USER">User</option>
-        <option value="ADMIN">Admin</option>
-        <option value="FACULTY">Faculty</option>
-        <option value="STUDENT">Student</option>
-      </select>
-      <br />
-      <Link
-        href="/account/signin"
-        className="mb-2 w-full rounded border border-neutral-300 px-3 py-2"
-      >
+      {/* password, firstName, lastName, email, role */}
+      <button type="button" onClick={signout} id="wd-signout-btn">
         Sign out
-      </Link>
+      </button>
     </div>
   );
 }

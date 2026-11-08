@@ -15,6 +15,7 @@ const emptyCourse: Course = {
   credits: 4,
   description: "New Description",
   image: "/images/reactjs.jpg",
+  term: "Fall 2024",
 };
 
 type CoursesStore = {

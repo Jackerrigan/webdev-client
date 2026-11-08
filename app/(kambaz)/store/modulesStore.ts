@@ -3,26 +3,41 @@
 import { create } from "zustand";
 import modulesJson from "../database/modules.json";
 
-export type ModuleItem = (typeof modulesJson)[number] & { editing?: boolean };
+export type Lesson = {
+  _id: string;
+  name: string;
+  description: string;
+  module: string;
+};
+
+export type CourseModule = {
+  _id: string;
+  name: string;
+  description: string;
+  course: string;
+  lessons?: Lesson[];
+  editing?: boolean;
+};
 
 type ModulesStore = {
-  modules: ModuleItem[];
+  modules: CourseModule[];
   addModule: (module: { name: string; course: string }) => void;
   deleteModule: (moduleId: string) => void;
+  updateModule: (module: CourseModule) => void;
   editModule: (moduleId: string) => void;
-  updateModule: (module: ModuleItem) => void;
 };
 
 export const useModulesStore = create<ModulesStore>((set) => ({
-  modules: modulesJson,
+  modules: modulesJson as CourseModule[],
   addModule: (module) =>
     set((state) => ({
       modules: [
         ...state.modules,
         {
-          ...module,
           _id: crypto.randomUUID(),
+          name: module.name,
           description: "",
+          course: module.course,
           lessons: [],
         },
       ],
@@ -31,14 +46,14 @@ export const useModulesStore = create<ModulesStore>((set) => ({
     set((state) => ({
       modules: state.modules.filter((m) => m._id !== moduleId),
     })),
+  updateModule: (module) =>
+    set((state) => ({
+      modules: state.modules.map((m) => (m._id === module._id ? module : m)),
+    })),
   editModule: (moduleId) =>
     set((state) => ({
       modules: state.modules.map((m) =>
         m._id === moduleId ? { ...m, editing: true } : m,
       ),
-    })),
-  updateModule: (module) =>
-    set((state) => ({
-      modules: state.modules.map((m) => (m._id === module._id ? module : m)),
     })),
 }));

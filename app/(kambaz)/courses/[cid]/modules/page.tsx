@@ -20,14 +20,7 @@ export default function Modules() {
   const modules = allModules.filter((module) => module.course === cid);
   return (
     <div>
-      <ModulesControls
-        moduleName={moduleName}
-        setModuleName={setModuleName}
-        addModule={() => {
-          addModule({ name: moduleName, course: cid as string });
-          setModuleName("");
-        }}
-      />
+      <ModulesControls />
       <ul id="wd-modules" className="m-0 list-none p-0">
         {modules.map((module) => (
           <Module

@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { useAccountContext } from "../account/AccountContext";
+import * as db from "../database";
 import {
   emptyCourse,
   useCoursesStore,
@@ -13,6 +15,15 @@ export default function Dashboard() {
   const addCourse = useCoursesStore((state) => state.addCourse);
   const updateCourse = useCoursesStore((state) => state.updateCourse);
   const [course, setCourse] = useState<Course>(emptyCourse);
+  const { currentUser } = useAccountContext();
+  const visibleCourses = currentUser
+    ? courses.filter((c) =>
+        db.enrollments.some(
+          (enrollment) =>
+            enrollment.user === currentUser._id && enrollment.course === c._id,
+        ),
+      )
+    : courses;
 
   return (
     <div id="wd-dashboard">

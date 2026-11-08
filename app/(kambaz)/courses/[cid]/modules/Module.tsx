@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import type { ModuleItem } from "../../../store/modulesStore";
+import type { CourseModule } from "../../../store/modulesStore";
 import ModuleControlButtons from "./ModuleControlButtons";
 
 export default function Module({
@@ -9,10 +9,10 @@ export default function Module({
   updateModule,
   children,
 }: {
-  module: ModuleItem;
+  module: CourseModule;
   deleteModule: (id: string) => void;
   editModule: (id: string) => void;
-  updateModule: (m: ModuleItem) => void;
+  updateModule: (m: CourseModule) => void;
   children?: ReactNode;
 }) {
   return (
@@ -32,11 +32,7 @@ export default function Module({
         ) : (
           <span>{module.name}</span>
         )}
-        <ModuleControlButtons
-          moduleId={module._id}
-          deleteModule={deleteModule}
-          editModule={editModule}
-        />
+        <ModuleControlButtons moduleId={module._id} />
       </div>
       <ul className="wd-lessons m-0 list-none p-0">{children}</ul>
     </li>
