@@ -15,6 +15,8 @@ import ProfileForm from "./profile/ProfileForm";
 import PropDrilling from "./PropDrilling";
 import StringStateVariables from "./StringStateVariables";
 import UrlEncoding from "./UrlEncoding";
+import ZustandExamples from "./zustand/ZustandExamples";
+import ZustandProfileForm from "./zustand/ZustandProfileForm";
 
 export default function Lab4() {
   const sayHello = (helloMessage: string) => {
@@ -46,6 +48,8 @@ export default function Lab4() {
       <PropDrilling />
       <UrlEncoding />
       <ContextExamples />
+      <ZustandExamples />
+      <ZustandProfileForm />
     </div>
   );
 }
