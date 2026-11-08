@@ -1,7 +1,8 @@
+"use client";
+
 import { FaUserCircle } from "react-icons/fa";
 import * as db from "../../../../database";
-
-export default async function PeopleTable({
+export default function PeopleTable({
   params,
 }: {
   params: Promise<{ cid: string }>;
