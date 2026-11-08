@@ -5,9 +5,13 @@ import { useCoursesStore, type Course } from "../store/coursesStore";
 export default function CourseCard({
   course,
   onEdit,
+  enrolled,
+  onToggleEnroll,
 }: {
   course: Course;
   onEdit: () => void;
+  enrolled: boolean;
+  onToggleEnroll: () => void;
 }) {
   const deleteCourse = useCoursesStore((state) => state.deleteCourse);
   return (
@@ -57,6 +61,18 @@ export default function CourseCard({
             }}
           >
             Delete
+          </button>
+          <button
+            type="button"
+            className={`ms-2 rounded px-3 py-1.5 text-sm font-medium text-white ${
+              enrolled ? "bg-red-600" : "bg-green-600"
+            }`}
+            onClick={(event) => {
+              event.preventDefault();
+              onToggleEnroll();
+            }}
+          >
+            {enrolled ? "Unenroll" : "Enroll"}
           </button>
         </div>
       </Link>

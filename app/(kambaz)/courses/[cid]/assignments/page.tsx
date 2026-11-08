@@ -1,16 +1,20 @@
+"use client";
+
+import { useAccountContext } from "@/app/(kambaz)/account/AccountContext";
+import { useAssignmentsStore } from "@/app/(kambaz)/store/assignmentsStore";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import { FaPlus, FaSearch } from "react-icons/fa";
-import * as db from "../../../database";
 import AssignmentItem from "./AssignmentItem";
 
-export default async function Assignments({
-  params,
-}: {
-  params: Promise<{ cid: string; aid: string }>;
-}) {
-  const { cid } = await params;
-  const assignments = db.assignments.filter(
-    (assignment) => assignment.course === cid,
+export default function Assignments() {
+  const { cid } = useParams<{ cid: string }>();
+  const { currentUser } = useAccountContext();
+  const isFaculty = currentUser?.role === "FACULTY";
+  const assignments = useAssignmentsStore((s) => s.assignments).filter(
+    (a) => a.course === cid,
   );
+  const deleteAssignment = useAssignmentsStore((s) => s.deleteAssignment);
   return (
     <div id="wd-assignments">
       <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
@@ -30,13 +34,15 @@ export default async function Assignments({
           >
             <FaPlus /> Group
           </button>
-          <button
-            id="wd-add-assignment"
-            type="button"
-            className="inline-flex items-center gap-1 rounded bg-red-600 px-3 py-1.5 text-sm font-medium text-white"
-          >
-            <FaPlus /> Assignment
-          </button>
+          {isFaculty && (
+            <Link
+              href={`/courses/${cid}/assignments/new`}
+              id="wd-add-assignment"
+              className="inline-flex items-center gap-1 rounded bg-red-600 px-3 py-1.5 text-sm font-medium text-white no-underline"
+            >
+              <FaPlus /> Assignment
+            </Link>
+          )}
         </div>
       </div>
       <h3
@@ -59,6 +65,8 @@ export default async function Assignments({
             aid={assignment._id}
             title={assignment.title}
             details={`Multiple Modules | Not available until ${assignment.available} | Due ${assignment.due} | ${assignment.points} pts`}
+            isFaculty={isFaculty}
+            onDelete={() => deleteAssignment(assignment._id)}
           />
         ))}
       </ul>
