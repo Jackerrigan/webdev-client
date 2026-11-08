@@ -30,15 +30,18 @@ export default function Dashboard() {
 
   return (
     <div id="wd-dashboard">
-      <h1 id="wd-dashboard-title">Dashboard</h1>
-      <button
-        type="button"
-        id="wd-enrollments-btn"
-        className="rounded bg-blue-600 px-3 py-1.5 text-sm font-medium text-white"
-        onClick={() => setShowAll(!showAll)}
-      >
-        Enrollments
-      </button>
+      <div className="flex items-center justify-between">
+        <h1 id="wd-dashboard-title">Dashboard</h1>
+        <button
+          type="button"
+          id="wd-enrollments-btn"
+          className="rounded bg-blue-600 px-3 py-1.5 text-sm font-medium text-white"
+          onClick={() => setShowAll(!showAll)}
+        >
+          Enrollments
+        </button>
+      </div>
+
       <hr />
       <h5 className="flex flex-wrap items-center gap-2">
         New Course
