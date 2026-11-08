@@ -2,6 +2,7 @@
 
 import { FaUserCircle } from "react-icons/fa";
 import * as db from "../../../../database";
+
 export default function PeopleTable({
   params,
 }: {
