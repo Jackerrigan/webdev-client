@@ -74,13 +74,15 @@ export default function Dashboard() {
         id="wd-start-date"
       />
       <hr />
-      <h2 id="wd-dashboard-published">Published Courses ({courses.length})</h2>
+      <h2 id="wd-dashboard-published">
+        Published Courses ({visibleCourses.length})
+      </h2>
       <hr />
       <div
         id="wd-dashboard-courses"
         className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4"
       >
-        {courses.map((c) => (
+        {visibleCourses.map((c) => (
           <CourseCard key={c._id} course={c} onEdit={() => setCourse(c)} />
         ))}
       </div>

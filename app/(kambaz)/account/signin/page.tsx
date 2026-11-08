@@ -3,35 +3,32 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import * as db from "../../database";
 import { useAccountContext } from "../AccountContext";
 
-export default function Signup() {
+export default function Signin() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const { setCurrentUser } = useAccountContext();
   const router = useRouter();
 
-  const signup = () => {
-    if (!username || !password) return;
-    setCurrentUser({
-      _id: crypto.randomUUID(),
-      username,
-      password,
-      firstName: "",
-      lastName: "",
-      email: "",
-      role: "STUDENT",
-      loginId: "",
-      section: "",
-      lastActivity: "",
-      totalActivity: "",
-    });
-    router.push("/account/profile");
+  const signin = () => {
+    const user = db.users.find(
+      (u) => u.username === username && u.password === password,
+    );
+    if (!user) {
+      setError("Invalid username or password");
+      return;
+    }
+    setCurrentUser(user);
+    router.push("/dashboard");
   };
 
   return (
-    <div id="wd-signup-screen">
-      <h3>Sign up</h3>
+    <div id="wd-signin-screen">
+      <h3>Sign in</h3>
+      {error && <div id="wd-signin-error">{error}</div>}
       <input
         id="wd-username"
         placeholder="username"
@@ -45,11 +42,11 @@ export default function Signup() {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button type="button" onClick={signup} id="wd-signup-btn">
-        Sign up
-      </button>{" "}
-      <Link href="/account/signin" id="wd-signin-link">
+      <button type="button" onClick={signin} id="wd-signin-btn">
         Sign in
+      </button>{" "}
+      <Link href="/account/signup" id="wd-signup-link">
+        Sign up
       </Link>
     </div>
   );
