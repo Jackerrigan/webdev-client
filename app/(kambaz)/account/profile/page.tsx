@@ -31,7 +31,38 @@ export default function Profile() {
         value={profile.username}
         onChange={(e) => setProfile({ ...profile, username: e.target.value })}
       />
-      {/* password, firstName, lastName, email, role */}
+      <input
+        id="wd-password"
+        type="password"
+        value={profile.password}
+        onChange={(e) => setProfile({ ...profile, password: e.target.value })}
+      />
+      <input
+        id="wd-firstname"
+        value={profile.firstName}
+        onChange={(e) => setProfile({ ...profile, firstName: e.target.value })}
+      />
+      <input
+        id="wd-lastname"
+        value={profile.lastName}
+        onChange={(e) => setProfile({ ...profile, lastName: e.target.value })}
+      />
+      <input
+        id="wd-email"
+        type="email"
+        value={profile.email}
+        onChange={(e) => setProfile({ ...profile, email: e.target.value })}
+      />
+      <select
+        id="wd-role"
+        value={profile.role}
+        onChange={(e) => setProfile({ ...profile, role: e.target.value })}
+      >
+        <option value="STUDENT">Student</option>
+        <option value="TA">Teaching Assistant</option>
+        <option value="FACULTY">Faculty</option>
+        <option value="ADMIN">Admin</option>
+      </select>
       <button type="button" onClick={signout} id="wd-signout-btn">
         Sign out
       </button>

@@ -3,53 +3,53 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import * as db from "../../database";
 import { useAccountContext } from "../AccountContext";
 
-export default function Signin() {
-  const [credentials, setCredentials] = useState({
-    username: "",
-    password: "",
-  });
+export default function Signup() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const { setCurrentUser } = useAccountContext();
   const router = useRouter();
 
-  const signin = () => {
-    const user = db.users.find(
-      (u) =>
-        u.username === credentials.username &&
-        u.password === credentials.password,
-    );
-    if (!user) return;
-    setCurrentUser(user);
-    router.push("/dashboard");
+  const signup = () => {
+    if (!username || !password) return;
+    setCurrentUser({
+      _id: crypto.randomUUID(),
+      username,
+      password,
+      firstName: "",
+      lastName: "",
+      email: "",
+      role: "STUDENT",
+      loginId: "",
+      section: "",
+      lastActivity: "",
+      totalActivity: "",
+    });
+    router.push("/account/profile");
   };
 
   return (
-    <div id="wd-signin-screen">
-      <h3>Sign in</h3>
+    <div id="wd-signup-screen">
+      <h3>Sign up</h3>
       <input
-        placeholder="username"
         id="wd-username"
-        value={credentials.username}
-        onChange={(e) =>
-          setCredentials({ ...credentials, username: e.target.value })
-        }
+        placeholder="username"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
       />
       <input
+        id="wd-password"
         placeholder="password"
         type="password"
-        id="wd-password"
-        value={credentials.password}
-        onChange={(e) =>
-          setCredentials({ ...credentials, password: e.target.value })
-        }
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
       />
-      <button type="button" onClick={signin} id="wd-signin-btn">
-        Sign in
-      </button>
-      <Link href="/account/signup" id="wd-signup-link">
+      <button type="button" onClick={signup} id="wd-signup-btn">
         Sign up
+      </button>{" "}
+      <Link href="/account/signin" id="wd-signin-link">
+        Sign in
       </Link>
     </div>
   );
