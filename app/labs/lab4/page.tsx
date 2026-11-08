@@ -7,12 +7,15 @@ import ContextExamples from "./context/ContextExamples";
 import Counter from "./Counter";
 import CounterBroken from "./CounterBroken";
 import DateStateVariable from "./DateStateVariable";
+import Effect from "./Effect";
+import HooksPage from "./hooks/page";
 import ObjectStateVariable from "./ObjectStateVariable";
 import ParentStateComponent from "./ParentStateComponent";
 import PassingDataOnEvent from "./PassingDataOnEvent";
 import PassingFunctions from "./PassingFunctions";
 import ProfileForm from "./profile/ProfileForm";
 import PropDrilling from "./PropDrilling";
+import ReduxExamples from "./redux/ReduxExamples";
 import StringStateVariables from "./StringStateVariables";
 import UrlEncoding from "./UrlEncoding";
 import ZustandExamples from "./zustand/ZustandExamples";
@@ -50,6 +53,9 @@ export default function Lab4() {
       <ContextExamples />
       <ZustandExamples />
       <ZustandProfileForm />
+      <ReduxExamples />
+      <Effect />
+      <HooksPage />
     </div>
   );
 }
